@@ -1,5 +1,4 @@
-Framework
-=========
+*Framework | Fábio Barbosa*
 
 A CSS boilerplate, written in Sass with SCSS syntax, including a set of normalizing styles, a typographic system including tools for a modular scale, and a simple and semantic grid system. A LESS port is on my plans.
 
