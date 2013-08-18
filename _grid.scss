@@ -1,0 +1,68 @@
+// ==========================================================================
+//
+// GRID SYSTEM
+//
+// ==========================================================================
+// Inspired by semantic.gs
+// and http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/
+
+
+// $Border-box
+// --------------------------------------------------------------------------
+
+*,
+*:after,
+*:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+// $Variables
+// --------------------------------------------------------------------------
+
+$total-width:     100%   !default;
+$gutter-width:    1.5rem !default;
+$columns-number:  12     !default;
+
+
+// $Mixins
+// --------------------------------------------------------------------------
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin row($columns-number: $columns-number) {
+    margin: 0 ($gutter-width / -2);
+    @include clearfix();
+}
+
+@mixin column($x, $columns-number: $columns-number) {
+    display: block;
+    float: left;
+    width: ($total-width / $columns-number) * $x;
+    padding: 0 ($gutter-width / 2);
+}
+
+@mixin push($offset: 1) {
+    position: relative;
+    left: ($total-width / $columns-number) * $offset;
+}
+
+@mixin pull($offset: 1) {
+    position: relative;
+    right: ($total-width / $columns-number) * $offset;
+}
