@@ -36,9 +36,9 @@ $font-properties:       $font-weight #{$font-size}%/#{$line-height} $font-family
 // $Color
 // --------------------------------------------------------------------------
 
-$color-body:                #333 !default;
-$color-heading:             #222 !default;
-$color-small:               gray !default;
+$color-body:                #333        !default;
+$color-heading:             #222        !default;
+$color-small:               $color-body !default;
 
 
 // $AMPERSAND @font-face
