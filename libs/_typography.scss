@@ -14,21 +14,22 @@
 // $Type
 // --------------------------------------------------------------------------
 
-$line-height:               1.65        !default;
-$line-length:               33          !default;
+$line-height:           1.65                                            !default;
+$line-length:           33                                              !default;
 
-$font-size:                 112.5       !default;  // percentage value (16 * 112.5% = 18px)
-$font-base:                 16 * ($font-size/100); // converts our percentage to a pixel value
-$font-base-alt:             14          !default;  
-$font-base-small:           80%         !default;
-$font-ratio:                1.618       !default;
-$font-measure:              $font-base * $line-height;
+$font-size:             112.5                                           !default;  // percentage value
+$font-base:             16 * ($font-size/100);                                     // converts percentage to pixels
+$font-base-alt:         14                                              !default;  
+$font-base-small:       80%                                             !default;
+$font-ratio:            1.618                                           !default;
+$font-measure:          $font-base * $line-height;
 
-$font-family:               serif       !default;
-$font-family-sans:          sans-serif  !default;
-$font-weight:               normal;
-$font-weight-small-caps:    600         !default;
-$font-properties:           $font-weight #{$font-size}%/#{$line-height} $font-family;
+$font-family:           serif                                           !default;
+$font-family-sans:      sans-serif                                      !default;
+$font-weight:           normal;
+$font-weight-small:     600                                             !default;
+
+$font-properties:       $font-weight #{$font-size}%/#{$line-height} $font-family;
 
 
 // $Color
@@ -36,7 +37,7 @@ $font-properties:           $font-weight #{$font-size}%/#{$line-height} $font-fa
 
 $color-body:                #333 !default;
 $color-heading:             #222 !default;
-$color-small-caps:          gray !default;
+$color-small:               gray !default;
 
 
 // $AMPERSAND @font-face
@@ -665,7 +666,7 @@ code {
 // --------------------------------------------------------------------------
 
 abbr {
-    @include smallcaps($color-small-caps, $font-weight-small-caps);
+    @include smallcaps($color-small, $font-weight-small);
     &:hover {
         cursor: help;
     }
