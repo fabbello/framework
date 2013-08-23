@@ -17,9 +17,10 @@
 $line-height:           1.65                                            !default;
 $line-length:           33                                              !default;
 
-$font-size:             112.5                                           !default;  // percentage value
-$font-base:             16 * ($font-size/100);                                     // converts percentage to pixels
-$font-base-alt:         14                                              !default;  
+$font-size:             112.5                                           !default;
+$font-size-alt:         80                                              !default;  
+$font-base:             16 * ($font-size/100);
+$font-base-alt:         16 * ($font-size-alt/100);
 $font-base-small:       80%                                             !default;
 $font-ratio:            1.618                                           !default;
 $font-measure:          $font-base * $line-height;
