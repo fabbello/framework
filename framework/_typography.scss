@@ -574,9 +574,6 @@ $sizes: tera        power($font-ratio, 4) * $font-base,
 // $Globals
 // --------------------------------------------------------------------------
 
-html,
-body { height: 100%; }
-
 html { font: $font-properties; }
 body { color: $color-body; }
 
