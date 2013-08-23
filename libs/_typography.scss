@@ -192,7 +192,8 @@ $sizes: tera        power($font-ratio, 4) * $font-base,
         gamma       power($font-ratio, 2) * $font-base-alt, 
         delta       power($font-ratio, 1) * $font-base, 
         epsilon     power($font-ratio, 1) * $font-base-alt, 
-        zeta        $font-base;
+        zeta        $font-base,
+        eta         power($font-ratio, -1) * $font-base-alt;
 
 // for each size in the scale, create a placeholder
 @each $size in $sizes {
