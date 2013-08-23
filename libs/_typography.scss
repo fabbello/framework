@@ -593,14 +593,6 @@ h6 {
     color: $color-heading;
 }
 
-h1 { @extend %alpha; }
-h2 { @extend %beta; }
-h3 { @extend %gamma; }
-h4 { @extend %delta; }
-h5 { @extend %epsilon; }
-h6 { @extend %zeta; }
-
-
 // $Paragraphs
 // --------------------------------------------------------------------------
 
