@@ -47,7 +47,7 @@ $columns-number:  12     !default;
 }
 
 @mixin baseline() {
-    background-image: linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
+    background-image: linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
     background-size: 100% #{$line-height}rem;
 }
 
