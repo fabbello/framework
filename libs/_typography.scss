@@ -15,7 +15,7 @@
 // --------------------------------------------------------------------------
 
 $line-height:           1.65                                        !default;
-$line-length:           ($font-size * 3) / 100                      !default;
+$line-length:           $font-size * 300 / 10                       !default;
 
 $font-size:             112.5                                       !default;
 $font-size-alt:         80                                          !default;  
