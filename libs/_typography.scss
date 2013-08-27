@@ -14,21 +14,21 @@
 // $Type
 // --------------------------------------------------------------------------
 
-$line-height:           1.65                                            !default;
-$line-length:           33                                              !default;
+$line-height:           1.65                                        !default;
+$line-length:           300 * ($font-size / 100)                    !default;
 
-$font-size:             112.5                                           !default;
-$font-size-alt:         80                                              !default;  
-$font-base:             16 * ($font-size/100);
-$font-base-alt:         16 * ($font-size-alt/100);
-$font-base-small:       80%                                             !default;
-$font-ratio:            1.618                                           !default;
+$font-size:             112.5                                       !default;
+$font-size-alt:         80                                          !default;  
+$font-base:             16 * ($font-size / 100);
+$font-base-alt:         16 * ($font-size-alt / 100);
+$font-base-small:       80%                                         !default;
+$font-ratio:            1.618                                       !default;
 $font-measure:          $font-base * $line-height;
 
-$font-family:           serif                                           !default;
-$font-family-sans:      sans-serif                                      !default;
+$font-family:           serif                                       !default;
+$font-family-sans:      sans-serif                                  !default;
 $font-weight:           normal;
-$font-weight-small:     600                                             !default;
+$font-weight-small:     600                                         !default;
 
 $font-properties:       $font-weight #{$font-size}%/#{$line-height} $font-family;
 
@@ -36,9 +36,9 @@ $font-properties:       $font-weight #{$font-size}%/#{$line-height} $font-family
 // $Color
 // --------------------------------------------------------------------------
 
-$color-body:                #333        !default;
-$color-heading:             #222        !default;
-$color-small:               $color-body !default;
+$color-body:            #333                                        !default;
+$color-heading:         #222                                        !default;
+$color-small:           $color-body                                 !default;
 
 
 // $AMPERSAND @font-face
@@ -598,13 +598,12 @@ h6 {
 // --------------------------------------------------------------------------
 
 p {
-    margin: 0 0 $line-height * 1em;
     @include body-copy();
+    margin: 0 0 $line-height * 1em;
 
     & + p {
         //siblings indentation
         text-indent: $indent-val;
-        margin-top: -$indent-val;
     }
 }
 

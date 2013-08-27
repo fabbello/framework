@@ -13,8 +13,6 @@
 *,
 *:after,
 *:before {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -49,16 +47,8 @@ $columns-number:  12     !default;
 }
 
 @mixin baseline() {
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%); /* Opera11.10+ */
-    background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* IE10+ */
-    background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%); /* W3C */
-     
-    -webkit-background-size: 100% #{$line-height}rem;
-         -o-background-size: 100% #{$line-height}rem;
-            background-size: 100% #{$line-height}rem;
+    background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%);
+    background-size: 100% #{$line-height}rem;
 }
 
 @mixin row($columns-number: $columns-number) {
