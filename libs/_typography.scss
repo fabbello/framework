@@ -168,6 +168,16 @@ $indent-val: 1.5em;
     }
 }
 
+@mixin flow($font-size, $base-font: $font-base, $base-height: $line-height) {
+    $coef: ceil((1 / ($base-height * $base-font / @font-size)));
+    $size: (($font-size / $base-font) + 0em);
+    $height: (($base-font * $base-height / $font-size) + 0em);    
+    font-size: @size;
+    line-height: ($height * $coef);
+    margin-top: $height;
+    margin-bottom: 0;
+}
+
 
 // $Headings
 // --------------------------------------------------------------------------
@@ -201,6 +211,10 @@ $sizes: tera        power($font-ratio, 4) * $font-base,
         @include type-scale( nth($size, 2), $font-base, '#{$type-scale-unit-value}', $font-measure);
     }
 }
+
+h1 { @include flow(72); }
+h2 { @include flow(36); }
+h3 { @include flow(16); }
 
 
 // $Wordwrap
