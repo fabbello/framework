@@ -169,7 +169,7 @@ $indent-val: 1.5em;
 }*/
 
 @mixin type-scale($font-size, $base-font: $font-base, $base-height: $line-height, $base-value: $type-scale-unit-value) {
-    $coef: ceil(1 / ($base-height * $base-font / $font-size));
+    $coef: ceil((1 / ($base-height * $base-font / $font-size)));
     $size: $font-size / $base-font;
     $height: $base-font * $base-height / $font-size;
 
