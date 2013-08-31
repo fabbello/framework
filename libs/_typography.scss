@@ -168,18 +168,14 @@ $indent-val: 1.5em;
     }
 }*/
 
-@mixin type-scale($font-size, $base-font: $font-base, $base-height: $line-height, $base-value: $type-scale-unit-value) {
+@mixin type-scale($font-size, $base-font: $font-base, $base-height: $line-height) {
     $coef: ceil((1 / ($base-height * $base-font / $font-size)));
     $size: $font-size / $base-font;
     $height: $base-font * $base-height / $font-size;
 
-    @if $base-value == rem {
-        font-size: $size * $base-font + px;
-    }
-
-    font-size: $size + $base-value;
+    font-size: $size * 1em;
     line-height: ($height * $coef);
-    margin-top: $height + $base-value;
+    margin-top: $height * 1em;
     margin-bottom: 0;
 }
 
