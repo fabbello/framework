@@ -211,11 +211,11 @@ $sizes: tera        power($font-ratio, 4) * $font-base,
         eta         power($font-ratio, -1) * $font-base-alt;
 
 // for each size in the scale, create a placeholder
-@each $size in $sizes {
+/*@each $size in $sizes {
     %#{nth($size, 1)} {
         @include type-scale( nth($size, 2), $font-base, '#{$type-scale-unit-value}', $font-measure);
     }
-}
+}*/
 
 
 // $Wordwrap
