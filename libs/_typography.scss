@@ -173,7 +173,7 @@ $indent-val: 1.5em;
     $size: $font-size / $base-font;
     $height: $base-font * $base-height / $font-size;
 
-    @if $value == rem {
+    @if $base-value == rem {
         font-size: $size * $base-font + px;
     }
 
