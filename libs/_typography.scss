@@ -95,21 +95,21 @@ $indent-val: 1.5em;
 // -------------------------------------//
 // factor the font-base by an exponent
 
-@function power($base, $exponent) {
+@function power($base: $font-base, $exponent, $ratio: $font-ratio) {
     // reset value
     $value: $base;
     
     // positive integers get multiplied
     @if $exponent > 1 {
         @for $i from 2 through $exponent {
-            $value: $value * $base;
+            $value: $value * $ratio;
         }
     }
     
     // negative integers get divided
     @if $exponent < 1 {
-        @for $i from 0 through -$exponent {
-            $value: $value / $base;
+        @for $i from -1 through $exponent {
+            $value: $value / $ratio;
         }
     }
 
@@ -124,26 +124,6 @@ $indent-val: 1.5em;
 
 @function context-calc($scale, $base, $value) {
     @return ($scale/$base)#{$value};
-}
-
-
-// $Function $Measure-Margin
-// -------------------------------------//
-// divide 1 unit of measure by given font-size & return a relative em value
-
-@function measure-margin($scale, $base, $measure, $value) {
-    @if $measure > $scale {
-        @return ($measure - $scale) / $scale#{$value};
-    }
-
-    @if $measure == $scale {
-        @return 0#{$value};
-    }
-
-    $ceiling: ceil($scale / $measure);
-    $lead: $ceiling * $measure;
-
-    @return ($lead - $scale) / $base#{$value};
 }
 
 
@@ -176,7 +156,6 @@ $indent-val: 1.5em;
     font-size: $size * 1em;
     line-height: ($height * $coef);
     margin-top: $height * 1em;
-    margin-bottom: 0;
 }
 
 
@@ -185,8 +164,9 @@ $indent-val: 1.5em;
 
 // styles for all headings, in the style of @csswizardry
 %hN {
-    // voodoo to enable ligatures and kerning
     text-rendering: optimizeLegibility;
+    margin-bottom: 0;
+
     &:first-child{
         margin-top: 0;
     }
@@ -195,23 +175,25 @@ $indent-val: 1.5em;
 // make a multi-dimensional array, where:
 // the first value is the name of the placeholder
 // and the second value is the scale for the size
-$sizes: tera        power($font-ratio, 4) * $font-base,
-        giga        power($font-ratio, 4) * $font-base-alt,
-        mega        power($font-ratio, 3) * $font-base, 
-        alpha       power($font-ratio, 3) * $font-base-alt,
-        beta        power($font-ratio, 2) * $font-base, 
-        gamma       power($font-ratio, 2) * $font-base-alt, 
-        delta       power($font-ratio, 1) * $font-base, 
-        epsilon     power($font-ratio, 1) * $font-base-alt, 
-        zeta        $font-base,
-        eta         power($font-ratio, -1) * $font-base-alt;
+$sizes: tera        power($font-base,       5),
+        giga        power($font-base-alt,   4),
+        mega        power($font-base,       4), 
+        alpha       power($font-base-alt,   3),
+        beta        power($font-base,       3), 
+        gamma       power($font-base-alt,   2), 
+        delta       power($font-base,       2), 
+        epsilon     power($font-base-alt,   1), 
+        zeta        power($font-base,       1),
+        mini        power($font-base,      -1),
+        milli       power($font-base-alt,  -1),
+        micro       power($font-base,      -1);
 
 // for each size in the scale, create a placeholder
-/*@each $size in $sizes {
+@each $size in $sizes {
     %#{nth($size, 1)} {
-        @include type-scale( nth($size, 2), $font-base, '#{$type-scale-unit-value}', $font-measure);
+        @include type-scale(nth($size, 2));
     }
-}*/
+}
 
 
 // $Wordwrap
