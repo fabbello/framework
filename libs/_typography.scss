@@ -169,7 +169,7 @@ $indent-val: 1.5em;
 }
 
 @mixin flow($font-size, $base-font: $font-base, $base-height: $line-height) {
-    $coef: ceil((1 / ($base-height * $base-font / @font-size)));
+    $coef: ceil((1 / ($base-height * $base-font / $font-size)));
     $size: (($font-size / $base-font) + 0em);
     $height: (($base-font * $base-height / $font-size) + 0em);    
     font-size: $size;
