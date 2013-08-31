@@ -156,7 +156,7 @@ $indent-val: 1.5em;
 // $Type Scale
 // --------------------------------------------------------------------------
 
-@mixin type-scale($scale, $base, $value, $measure:"") {
+/*@mixin type-scale($scale, $base, $value, $measure:"") {
     // If 'rem' is used as a $value then provide a px fallback.
     @if $value == rem {
         font-size: $scale#{px};
@@ -166,15 +166,20 @@ $indent-val: 1.5em;
     @if $measure != "" {
         margin-bottom: measure-margin($scale, $base, $measure, $value);
     }
-}
+}*/
 
-@mixin flow($font-size, $base-font: $font-base, $base-height: $line-height) {
-    $coef: ceil((1 / ($base-height * $base-font / $font-size)));
-    $size: (($font-size / $base-font) + 0em);
-    $height: (($base-font * $base-height / $font-size) + 0em);    
-    font-size: $size;
+@mixin type-scale($font-size, $base-font: $font-base, $base-height: $line-height, $base-value: $type-scale-unit-value) {
+    $coef: ceil(1 / ($base-height * $base-font / $font-size));
+    $size: $font-size / $base-font;
+    $height: $base-font * $base-height / $font-size;
+
+    @if $value == rem {
+        font-size: $size * $base-font + px;
+    }
+
+    font-size: $size + $base-value;
     line-height: ($height * $coef);
-    margin-top: $height;
+    margin-top: $height + $base-value;
     margin-bottom: 0;
 }
 
@@ -186,9 +191,9 @@ $indent-val: 1.5em;
 %hN {
     // voodoo to enable ligatures and kerning
     text-rendering: optimizeLegibility;
-    // this fixes huge spaces when a heading wraps onto two lines
-    line-height: 1;
-    margin-top: 0;
+    &:first-child{
+        margin-top: 0;
+    }
 }
 
 // make a multi-dimensional array, where:
