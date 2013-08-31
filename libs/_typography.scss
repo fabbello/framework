@@ -95,7 +95,7 @@ $indent-val: 1.5em;
 // -------------------------------------//
 // factor the font-base by an exponent
 
-@function power($base: $font-base, $exponent, $ratio: $font-ratio) {
+@function power($base: $font-base, $exponent: 1, $ratio: $font-ratio) {
     // reset value
     $value: $base;
     
