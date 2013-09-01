@@ -183,7 +183,7 @@ $sizes: tera        power($font-base,       5),
         delta       power($font-base,       2), 
         epsilon     power($font-base-alt,   2), 
         zeta        power($font-base,       1),
-        milli        power($font-base,      -2);
+        micro       power($font-base,      -2);
 
 // for each size in the scale, create a placeholder
 @each $size in $sizes {
@@ -304,7 +304,7 @@ $sizes: tera        power($font-base,       5),
 // arguments below. Feel free to pass in arguments we've provided.
 // At this time you cannot pass in font-family arguments but you're gonna
 // change that anyway so why not just make that separately in your declaration.
-@mixin dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent) {
+@mixin dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: .33em .1em .33em 0, $padding: inherit, $color: $color-heading, $lineHeight: 1, $bg: transparent) {
     &:first-letter {
         float: $float;
         margin: $margin;
@@ -603,7 +603,7 @@ p {
 
 small,
 .small {
-    @extend %milli;
+    @extend %micro;
 }
 
 
