@@ -304,7 +304,7 @@ $sizes: tera        power($font-base,       5),
 // arguments below. Feel free to pass in arguments we've provided.
 // At this time you cannot pass in font-family arguments but you're gonna
 // change that anyway so why not just make that separately in your declaration.
-@mixin dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: .33em .1em .33em 0, $padding: inherit, $color: $color-heading, $lineHeight: 1, $bg: transparent) {
+@mixin dropcap($float: left, $font-size: 5.25em, $font-family: inherit, $text-indent: 0, $margin: .3em .1em .1em 0, $padding: inherit, $color: $color-heading, $lineHeight: .25, $bg: transparent) {
     &:first-letter {
         float: $float;
         margin: $margin;
