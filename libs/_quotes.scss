@@ -1,0 +1,72 @@
+// $Blockquote Cites
+// --------------------------------------------------------------------------
+/**
+ * Blockquote Markup
+ *
+    <blockquote cite="">
+        <p>&Prime;&Prime;</p>
+        <cite>
+            <small><a href=""></a></small>
+        </cite>
+    </blockquote>
+ *
+ * Extend this object into your markup.
+ *
+ */
+
+@mixin cite-style($display:block, $text-align:right, $font-size: .875em) {
+    display: $display;
+    font-size: $font-size;
+    text-align: $text-align;
+}
+
+%cite {
+    @include cite-style;
+}
+
+
+// $Pull Quotes
+// --------------------------------------------------------------------------
+// http://24ways.org/2005/swooshy-curly-quotes-without-images
+//
+// http://todomvc.com - Thanks sindresorhus!
+// https://github.com/typeplate/typeplate.github.com/issues/49
+
+/**
+ * Pull Quotes Markup
+ *
+    <aside class="pull-quote">
+        <blockquote>
+            <p></p>
+        </blockquote>
+    </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+
+@mixin pull-quotes($font-size, $opacity) {
+    position: relative;
+    padding: $font-size;
+    &:before,
+    &:after {
+        height: $font-size;
+        opacity: $opacity;
+        position: absolute;
+        font-size: $font-size;
+    }
+    &:before {
+        content: '“';
+        top:  0em;
+        left: 0em;
+    }
+    &:after {
+        content: '”';
+        bottom: 0em;
+        right: 0em;
+    }
+}
+
+%pull-quote {
+    @include pull-quotes(4em, .15);
+}

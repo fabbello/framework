@@ -1,0 +1,34 @@
+// ==========================================================================
+//
+// LISTS
+//
+// ==========================================================================
+
+
+/* ==========================================================================
+   MIXINS
+   ========================================================================== */
+
+@mixin list-style($style) {
+    // lining style
+    @if $style == normal {
+        padding-left: $indent-value;
+    }
+
+    @if $style == unstyled {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    @if $style == menu {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            float: left;
+            margin-left: $indent-value;
+        }
+    }
+}

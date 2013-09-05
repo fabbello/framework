@@ -1,0 +1,85 @@
+// ==========================================================================
+//
+// MODULAR SCALE
+//
+// ==========================================================================
+
+
+/* ==========================================================================
+   FUNCTIONS
+   ========================================================================== */
+
+
+// $Power Function
+// --------------------------------------------------------------------------
+
+@function power($base: $font-base, $exponent: 1, $ratio: $font-ratio) {
+    // reset value
+    $value: $base;
+    
+    // positive integers get multiplied
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $ratio;
+        }
+    }
+    
+    // negative integers get divided
+    @if $exponent < 1 {
+        @for $i from -1 through $exponent {
+            $value: $value / $ratio;
+        }
+    }
+
+    // return the last value written
+    @return $value; 
+}
+
+
+/* ==========================================================================
+   MIXINS
+   ========================================================================== */
+
+
+// $Type Scale
+// --------------------------------------------------------------------------
+
+@mixin scale($size, $base: $font-base, $height: $line-height) {
+    $coef: ceil((1 / ($height * $base / $size)));
+    $scale-size: $size / $base;
+    $scale-height: $base * $height / $size;
+
+    font-size: $scale-size * 1em;
+    line-height: $scale-height * $coef;
+    margin-top: $scale-height * 1em;
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   ARRAYS
+   ========================================================================== */
+
+// $Scale Array
+// --------------------------------------------------------------------------
+
+// make a multi-dimensional array,
+// where the first value is the name of the placeholder
+// and the second value is the scale for the size
+$scale-sizes:   tera        power($font-base,       5),
+                giga        power($font-base-alt,   5),
+                mega        power($font-base,       4), 
+                alpha       power($font-base-alt,   4),
+                beta        power($font-base,       3), 
+                gamma       power($font-base-alt,   3), 
+                delta       power($font-base,       2), 
+                epsilon     power($font-base-alt,   2), 
+                zeta        power($font-base,       1),
+                micro       power($font-base,      -2);
+
+// for each size in the scale, create a placeholder
+@each $size in $scale-sizes {
+    %#{nth($size, 1)} {
+        @include type-scale(nth($size, 2));
+    }
+}

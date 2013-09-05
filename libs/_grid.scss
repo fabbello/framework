@@ -7,27 +7,6 @@
 // and http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/
 
 
-// $Globals
-// --------------------------------------------------------------------------
-
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
-html,
-body { min-height: 100%; }
-
-
-// $Variables
-// --------------------------------------------------------------------------
-
-$total-width:     100%   !default;
-$gutter-width:    1.5rem !default;
-$columns-number:  12     !default;
-
-
 // $Mixins
 // --------------------------------------------------------------------------
 

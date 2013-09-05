@@ -1,0 +1,65 @@
+// ==========================================================================
+//
+// VARIABLES
+//
+// ==========================================================================
+
+
+
+// $Grid
+// --------------------------------------------------------------------------
+
+$grid-width:           100%                                         !default;
+$grid-gutter:          1.5rem                                       !default;
+$grid-columns:         12                                           !default;
+
+
+// $Fonts
+// --------------------------------------------------------------------------
+
+$font-size:             112.5                                       !default;
+$font-size-alt:         $font-size * 0.75                           !default;  
+$font-base:             16 * ($font-size / 100);
+$font-base-alt:         16 * ($font-size-alt / 100);
+$font-base-small:       80%                                         !default;
+$font-ratio:            1.618                                       !default;
+
+$font-family:           serif                                       !default;
+$font-family-sans:      sans-serif                                  !default;
+$font-weight:           normal;
+$font-weight-small:     600                                         !default;
+
+
+// $Lines
+// --------------------------------------------------------------------------
+
+$line-height:           1.65                                        !default;
+$line-length:           $font-size * 30 / 100                       !default;
+
+
+// $Color
+// --------------------------------------------------------------------------
+
+$color-brand:           #ff0                                        !default,
+$color-body:            #333                                        !default;
+$color-heading:         #222                                        !default;
+
+$color-link:            $color-brand                                !default;
+$color-link-background: transparent                                 !default;
+
+
+// $Paragraphs
+// --------------------------------------------------------------------------
+
+$paragraph-ident:       1.5em                                       !default;
+$paragraph-style:       block                                       !default;
+
+
+// $Ampersands
+// --------------------------------------------------------------------------
+
+$amp-fontface-name: Ampersand;
+$amp-fontface-source: local('ACaslonPro-Italic'), local('Baskerville'), local('Palatino'), local('Book Antiqua');
+$amp-fontface-fallback: local('Georgia');
+
+$amp-font-family: $font-family;

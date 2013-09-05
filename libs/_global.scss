@@ -1,0 +1,132 @@
+// ==========================================================================
+//
+// GLOBALS
+//
+// ==========================================================================
+
+//rename this and its optionals as something sensitive and namespace the mixin sheets
+
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+
+[hidden],
+template {
+    display: none;
+}
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body { min-height: 100%; }
+
+html {
+    font: $font-weight #{$font-size}%/#{$line-height} $font-family;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    color: $color-body; 
+}
+
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+// styles for all headings, in the style of @csswizardry
+%hN {
+    text-rendering: optimizeLegibility;
+    margin-bottom: 0;
+    color: $color-heading;
+
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %hN;
+}
+
+
+/* ==========================================================================
+   Paragraphs
+   ========================================================================== */
+
+p {
+    @include body-copy();
+    @include paragraph-style($paragraph-style);
+}
+
+
+/* ==========================================================================
+   Small
+   ========================================================================== */
+
+small {
+    @extend %micro;
+}
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+    color: $color-link;
+    background: $color-link-background;
+
+    &:focus {
+        outline: thin dotted;
+    }
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+}
+
