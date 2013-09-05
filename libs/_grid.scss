@@ -7,10 +7,10 @@
 // and http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/
 
 
-// $Mixins
+// $Micro Clearfix
 // --------------------------------------------------------------------------
+// http://nicolasgallagher.com/micro-clearfix-hack/
 
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {
     *zoom: 1;
 
@@ -25,10 +25,18 @@
     }
 }
 
-@mixin baseline() {
+
+// $Baseline Guides
+// --------------------------------------------------------------------------
+
+@mixin guides() {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
     background-size: 100% #{$line-height}rem;
 }
+
+
+// $Grid Mixins
+// --------------------------------------------------------------------------
 
 @mixin row($columns-number: $columns-number) {
     margin: 0 ($gutter-width / -2);

@@ -40,8 +40,8 @@
 // --------------------------------------------------------------------------
 
 @mixin body-copy {
-    @include css-hyphens(auto);
     @extend %breakword;
+    hyphens: auto;
     text-align: justify;
     text-justify: inter-word;
     max-width: $line-length + em;
