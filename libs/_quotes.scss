@@ -48,6 +48,7 @@
 @mixin pull-quotes($font-size, $opacity) {
     position: relative;
     padding: $font-size;
+
     &:before,
     &:after {
         height: $font-size;
@@ -55,11 +56,13 @@
         position: absolute;
         font-size: $font-size;
     }
+
     &:before {
         content: '“';
         top:  0em;
         left: 0em;
     }
+    
     &:after {
         content: '”';
         bottom: 0em;
