@@ -22,7 +22,7 @@
 
 @mixin pull-quotes($font-size, $opacity) {
     $coef: ceil((1 / ($line-height * $font-base / $font-size)));
-    $height: $base * $height / $size;
+    $height: $font-base * $height / $size;
 
     position: relative;
     padding: $height * $coef 0;
