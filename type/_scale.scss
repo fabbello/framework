@@ -66,6 +66,6 @@ $scale-sizes:   tera        power($font-base,       5),
 // for each size in the scale, create a placeholder
 @each $size in $scale-sizes {
     %#{nth($size, 1)} {
-        @include type-scale(nth($size, 2));
+        @include scale(nth($size, 2));
     }
 }
