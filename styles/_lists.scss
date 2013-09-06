@@ -1,4 +1,4 @@
 ul,
 ol {
-    @include list-style();
+    @include list-style(normal);
 }
