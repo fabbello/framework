@@ -8,7 +8,7 @@
 @mixin list-style($style) {
     // lining style
     @if $style == normal {
-        padding-left: $indent-value;
+        padding-left: $paragraph-indent;
         margin-top: $line-height * 1em;
         margin-bottom: 0;
     }
