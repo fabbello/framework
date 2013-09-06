@@ -4,7 +4,23 @@
 //
 // ==========================================================================
 
-@import "libs/grid";
-@import "libs/normalize";
-@import "libs/forms";
-@import "libs/typography";
+@import "defaults";
+
+@import "grids/grid";
+
+@import "typography/scale";
+@import "typography/body";
+@import "typography/paragraphs";
+@import "typography/lists";
+@import "typography/quotes";
+@import "typography/definitions";
+@import "typography/accessibility";
+@import "typography/ampersands";
+
+@import "normalize/base";
+@import "normalize/extended";
+@import "normalize/quotes";
+@import "normalize/tables";
+@import "normalize/embed";
+@import "normalize/forms";
+@import "normalize/code";

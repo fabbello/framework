@@ -1,0 +1,58 @@
+// ==========================================================================
+//
+// ACCESSIBILITY
+//
+// ==========================================================================
+
+
+// $Hidden Content
+// --------------------------------------------------------------------------
+
+@mixin hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+// $Image Replacement
+// --------------------------------------------------------------------------
+
+@mixin image-replace {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+
+// $Skip Links
+// --------------------------------------------------------------------------
+
+@mixin skip-links {
+    position: absolute;
+
+    a {
+        position: absolute;
+        left: -7000px;
+        padding: 0.5em;
+        background: black;
+        color: white;
+        text-decoration: none;
+    
+        &:focus {
+            position: static;
+        }
+    }
+}

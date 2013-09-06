@@ -41,9 +41,10 @@ $line-length:           $font-size * 30 / 100                       !default;
 // $Color
 // --------------------------------------------------------------------------
 
-$color-brand:           #ff0                                        !default,
 $color-body:            #333                                        !default;
 $color-heading:         #222                                        !default;
+$color-brand:           #ff0                                        !default;
+$color-highlight:       #ff0                                        !default;
 
 $color-link:            $color-brand                                !default;
 $color-link-background: transparent                                 !default;
