@@ -9,8 +9,8 @@
 
 fieldset {
     border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    margin: 0;
+    padding: $line-height * .5em;
 }
 
 
@@ -114,4 +114,5 @@ input::-moz-focus-inner {
 textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
+    line-height: $line-height;
 }
