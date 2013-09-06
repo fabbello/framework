@@ -21,13 +21,16 @@
 // https://github.com/typeplate/typeplate.github.com/issues/49
 
 @mixin pull-quotes($font-size, $opacity) {
+    $coef: ceil((1 / ($line-height * $font-base / $font-size)));
+    $height: $base * $height / $size;
+
     position: relative;
-    padding: $font-size;
+    padding: $height * $coef 0;
     margin: ($line-height * 1em) $paragraph-indent 0;
 
     &:before,
     &:after {
-        height: $font-size;
+        height: $height * $coef;
         opacity: $opacity;
         position: absolute;
         font-size: $font-size;
