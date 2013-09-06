@@ -9,6 +9,8 @@
     // lining style
     @if $style == normal {
         padding-left: $indent-value;
+        margin-top: $line-height * 1em;
+        margin-bottom: 0;
     }
 
     @if $style == unstyled {

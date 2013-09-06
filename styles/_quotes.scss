@@ -13,3 +13,7 @@ q {
 cite {
     @include cite-style;
 }
+
+blockquote {
+    @extend %pull-quote;
+}
