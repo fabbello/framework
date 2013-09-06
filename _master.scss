@@ -8,19 +8,19 @@
 
 @import "grids/grid";
 
-@import "typography/scale";
-@import "typography/body";
-@import "typography/paragraphs";
-@import "typography/lists";
-@import "typography/quotes";
-@import "typography/definitions";
-@import "typography/accessibility";
-@import "typography/ampersands";
+@import "type/scale";
+@import "type/body";
+@import "type/paragraphs";
+@import "type/lists";
+@import "type/quotes";
+@import "type/definitions";
+@import "type/accessibility";
+@import "type/ampersands";
 
-@import "normalize/base";
-@import "normalize/extended";
-@import "normalize/quotes";
-@import "normalize/tables";
-@import "normalize/embed";
-@import "normalize/forms";
-@import "normalize/code";
+@import "styles/base";
+@import "styles/extended";
+@import "styles/quotes";
+@import "styles/tables";
+@import "styles/embed";
+@import "styles/forms";
+@import "styles/code";
