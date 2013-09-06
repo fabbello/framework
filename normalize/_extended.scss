@@ -26,36 +26,9 @@ xmp {
 }
 
 
-// $Codeblocks
-// --------------------------------------------------------------------------
-
-// Correct font family set oddly in Safari 5 and Chrome.
-
-code,
-kbd,
-pre,
-samp {
-    font-family: $font-family-mono;
-    font-size: 1em;
-}
-
-pre code {
-    @extend %normal-wrap;
-    @include white-space(pre-wrap);
-}
-
-pre {
-    @include white-space(pre);
-}
-
-code {
-    @include white-space(pre);
-    font-family: monospace;
-}
-
-
 // $Abbreviations
 // --------------------------------------------------------------------------
+// Address styling not present in IE 8/9, Safari 5, and Chrome.
 
 abbr {
     @include smallcaps();
@@ -70,22 +43,43 @@ abbr {
 }
 
 
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
+// $Definition terms
+// --------------------------------------------------------------------------
+// Address styling not present in Safari 5 and Chrome.
 
 dfn {
     font-style: italic;
 }
 
 
-/**
- * Address styling not present in IE 8/9.
- */
+// $Highlights
+// --------------------------------------------------------------------------
+// Address styling not present in IE 8/9.
 
 mark {
-    background: #ff0;
+    background: $color-highlight;
     color: #000;
+}
+
+
+// $Subscripts and Superscripts
+// --------------------------------------------------------------------------
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
 }
 
 

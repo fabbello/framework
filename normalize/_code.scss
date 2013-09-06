@@ -1,0 +1,29 @@
+// ==========================================================================
+//
+// CODE BLOCKS
+//
+// ==========================================================================
+
+// Correct font family set oddly in Safari 5 and Chrome.
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-family-mono;
+    font-size: 1em;
+}
+
+pre code {
+    @extend %normal-wrap;
+    @include white-space(pre-wrap);
+}
+
+pre {
+    @include white-space(pre);
+}
+
+code {
+    @include white-space(pre);
+    font-family: monospace;
+}
