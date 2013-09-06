@@ -23,6 +23,7 @@
 @mixin pull-quotes($font-size, $opacity) {
     position: relative;
     padding: $font-size;
+    margin: ($line-height * 1em) $paragraph-indent 0;
 
     &:before,
     &:after {
