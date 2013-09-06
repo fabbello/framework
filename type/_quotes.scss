@@ -22,12 +22,11 @@
 
 @mixin pull-quotes($font-size, $opacity) {
     position: relative;
-    padding: 0 $font-size;
+    padding: 0 ($font-size / 2);
     margin: ($line-height * 1em) $paragraph-indent 0;
 
     &:before,
     &:after {
-        height: $font-size;
         opacity: $opacity;
         position: absolute;
         font-size: $font-size;
