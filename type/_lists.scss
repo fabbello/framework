@@ -27,6 +27,10 @@
         li {
             float: left;
             margin-left: $indent-value;
+
+            &:first-child {
+                margin-left: 0;
+            }
         }
     }
 }
