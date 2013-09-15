@@ -21,24 +21,24 @@ main,
 nav,
 section,
 summary {
-    display: block;
+	display: block;
 }
 
 audio,
 canvas,
 video {
-    display: inline-block;
+	display: inline-block;
 }
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+	display: none;
+	height: 0;
 }
 
 
 [hidden],
 template {
-    display: none;
+	display: none;
 }
 
 
@@ -49,20 +49,20 @@ template {
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body { min-height: 100%; }
 
 html {
-    font: $font-weight #{$font-size}%/#{$line-height} $font-family;
-    text-size-adjust: 100%;
+	font: $font-weight #{$font-size}%/#{$line-height} $font-family;
+	text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    color: $color-body; 
+	margin: 0;
+	color: $color-body; 
 }
 
 
@@ -72,13 +72,13 @@ body {
 
 // styles for all headings, in the style of @csswizardry
 %hN {
-    text-rendering: optimizeLegibility;
-    margin-bottom: 0;
-    color: $color-heading;
+	text-rendering: optimizeLegibility;
+	margin-bottom: 0;
+	color: $color-heading;
 
-    &:first-child{
-        margin-top: 0;
-    }
+	&:first-child{
+		margin-top: 0;
+	}
 }
 
 h1,
@@ -87,7 +87,7 @@ h3,
 h4,
 h5,
 h6 {
-    @extend %hN;
+	@extend %hN;
 }
 
 
@@ -96,8 +96,8 @@ h6 {
    ========================================================================== */
 
 p {
-    @include body-copy();
-    @include paragraph-style($paragraph-style);
+	@include body-copy();
+	@include paragraph-style($paragraph-style);
 }
 
 
@@ -106,7 +106,7 @@ p {
    ========================================================================== */
 
 small {
-    @extend %micro;
+	@extend %micro;
 }
 
 
@@ -115,17 +115,17 @@ small {
    ========================================================================== */
 
 a {
-    color: $color-link;
-    background: $color-link-background;
+	color: $color-link;
+	background: $color-link-background;
 
-    &:focus {
-        outline: thin dotted;
-    }
+	&:focus {
+		outline: thin dotted;
+	}
 
-    &:active,
-    &:hover {
-        outline: 0;
-    }
+	&:active,
+	&:hover {
+		outline: 0;
+	}
 }
 
 
@@ -137,5 +137,5 @@ a {
 
 b,
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }

@@ -10,8 +10,8 @@
 // http://trentwalton.com/2011/09/07/css-hyphenation
 
 @mixin css-hyphens($value) {
-    // Accepted values: [ none | manual | auto ]
-    hyphens: $value;      // W3C standard
+	// Accepted values: [ none | manual | auto ]
+	hyphens: $value;      // W3C standard
 }
 
 
@@ -24,15 +24,15 @@
 // arbitrary points if there are no otherwise acceptable break points in the line.
 
 %breakword {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 %normal-wrap {
-    word-wrap: normal;
+	word-wrap: normal;
 }
 
 %inherit-wrap {
-    word-wrap: auto;
+	word-wrap: auto;
 }
 
 
@@ -40,11 +40,11 @@
 // --------------------------------------------------------------------------
 
 @mixin body-copy {
-    @extend %breakword;
-    hyphens: auto;
-    text-align: justify;
-    text-justify: inter-word;
-    max-width: $line-length + em;
+	@extend %breakword;
+	hyphens: auto;
+	text-align: justify;
+	text-justify: inter-word;
+	max-width: $line-length + em;
 }
 
 
@@ -52,11 +52,11 @@
 // --------------------------------------------------------------------------
 
 @mixin white-space($wrap-space) {
-    @if $wrap-space == 'pre-wrap' {
-        white-space: $wrap-space;       // current browsers
-    } @else {
-        white-space: $wrap-space;
-    }
+	@if $wrap-space == 'pre-wrap' {
+		white-space: $wrap-space;       // current browsers
+	} @else {
+		white-space: $wrap-space;
+	}
 }
 
 
@@ -65,13 +65,13 @@
 // http://blog.hypsometry.com/articles/true-small-capitals-with-font-face
 
 @mixin smallcaps($color: $color-body, $weight: $font-weight-small) {
-    // depends on the font family.
-    // some font-families don't support small caps
-    // or don't provide them with their web font.
-    font-variant: small-caps;
-    font-weight: $weight;
-    text-transform: lowercase;
-    color: $color;
+	// depends on the font family.
+	// some font-families don't support small caps
+	// or don't provide them with their web font.
+	font-variant: small-caps;
+	font-weight: $weight;
+	text-transform: lowercase;
+	color: $color;
 }
 
 
@@ -81,15 +81,15 @@
 // --------------------------------------------------------------------------
 
 @mixin dropcap($float: left, $font-size: 5.25em, $font-family: inherit, $text-indent: 0, $margin: .3em .1em .1em 0, $padding: inherit, $color: $color-heading, $lineHeight: .25, $bg: transparent) {
-    &:first-letter {
-        float: $float;
-        margin: $margin;
-        padding: $padding;
-        font-size: $font-size;
-        font-family: $font-family;
-        line-height: $lineHeight;
-        text-indent: $text-indent;
-        background: $bg;
-        color: $color;
-    }
+	&:first-letter {
+		float: $float;
+		margin: $margin;
+		padding: $padding;
+		font-size: $font-size;
+		font-family: $font-family;
+		line-height: $lineHeight;
+		text-indent: $text-indent;
+		background: $bg;
+		color: $color;
+	}
 }

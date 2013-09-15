@@ -7,72 +7,72 @@
 
 
 @mixin definition-list-style($style) {
-    // lining style
-    @if $style == lining {
-        dt,
-        dd {
-            display: inline;
-            margin: 0;
-        }
+	// lining style
+	@if $style == lining {
+		dt,
+		dd {
+			display: inline;
+			margin: 0;
+		}
 
-        dt,
-        dd {
+		dt,
+		dd {
 
-            & + dt {
+			& + dt {
 
-                &:before {
-                    content: "\A";
-                    white-space: pre;
-                }
-            }
-        }
+				&:before {
+					content: "\A";
+					white-space: pre;
+				}
+			}
+		}
 
-        dd {
-            & + dd {
+		dd {
+			& + dd {
 
-                &:before {
-                    content: ", ";
-                }
-            }
+				&:before {
+					content: ", ";
+				}
+			}
 
-            &:before {
-                content: ": ";
-                margin-left: -0.2rem; //removes extra space between the dt and the colon
-            }
-        }
-    }
+			&:before {
+				content: ": ";
+				margin-left: -0.2rem; //removes extra space between the dt and the colon
+			}
+		}
+	}
 
-    // dictionary style
-    @if $style == dictionary {
-        dt {
-            display: inline;
-            counter-reset: definitions;
+	// dictionary style
+	@if $style == dictionary {
+		dt {
+			display: inline;
+			counter-reset: definitions;
 
-            & + dt {
-                &:before {
-                    content: ", ";
-                    margin-left: -0.2rem; // removes extra space between the dt and the comma
-                }
-            }
-        }
+			& + dt {
+				&:before {
+					content: ", ";
+					margin-left: -0.2rem; // removes extra space between the dt and the comma
+				}
+			}
+		}
 
-        dd {
-            display: block;
-            counter-increment: definitions;
+		dd {
+			display: block;
+			counter-increment: definitions;
 
-            &:before {
-                content: counter(definitions, decimal) ". ";
-            }
-        }
-    }
+			&:before {
+				content: counter(definitions, decimal) ". ";
+			}
+		}
+	}
 }
 
 
 
 %lining {
-    @include definition-list-style(lining);
+	@include definition-list-style(lining);
 }
 
 %dictionary-style {
-    @include definition-list-style(dictionary);
+	@include definition-list-style(dictionary);
 }

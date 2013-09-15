@@ -6,18 +6,18 @@
 
 
 @mixin paragraph-style($style) {
-    // lining style
-    @if $style == indented {
-        margin: 0 0 $line-height * 1em;
+	// lining style
+	@if $style == indented {
+		margin: 0 0 $line-height * 1em;
 
-        & + p {
-            //siblings indentation
-            text-indent: $indent-val;
-        }
-    }
+		& + p {
+			//siblings indentation
+			text-indent: $indent-val;
+		}
+	}
 
-    @if $style == block {
-        margin-top: $line-height * 1em;
-        margin-bottom: 0;
-    }
+	@if $style == block {
+		margin-top: $line-height * 1em;
+		margin-bottom: 0;
+	}
 }

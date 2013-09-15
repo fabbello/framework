@@ -10,20 +10,20 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $font-family-mono;
-    font-size: 1em;
+	font-family: $font-family-mono;
+	font-size: 1em;
 }
 
 pre code {
-    @extend %normal-wrap;
-    @include white-space(pre-wrap);
+	@extend %normal-wrap;
+	@include white-space(pre-wrap);
 }
 
 pre {
-    @include white-space(pre);
+	@include white-space(pre);
 }
 
 code {
-    @include white-space(pre);
-    font-family: monospace;
+	@include white-space(pre);
+	font-family: monospace;
 }

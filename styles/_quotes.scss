@@ -7,13 +7,13 @@
 // Set consistent quote types.
 
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 cite {
-    @include cite-style;
+	@include cite-style;
 }
 
 blockquote {
-    @extend %pull-quote;
+	@extend %pull-quote;
 }
