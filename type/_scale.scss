@@ -46,9 +46,9 @@
 		font-size: $size + px;
 	}
 
-	font-size: $scale-size + $unit;
+	font-size: $scale-size $unit;
 	line-height: $scale-height * $scale-coef;
-	margin-top: $scale-height + $unit;
+	margin-top: $scale-height $unit;
 	margin-bottom: 0;
 }
 
