@@ -39,7 +39,7 @@
 	$scale-size: $size / $base;
 	$scale-height: $base * $height / $size;
 
-	@if $unit = 'rem' {
+	@if $unit == 'rem' {
 		font-size: $size + px;
 	}
 
