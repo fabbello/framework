@@ -36,7 +36,7 @@
 
 @mixin scale( $size, $base: $font-base, $height: $line-height, $unit: $grid-unit ) {
 	$scale-coef: ceil( $size / ( $height * $base ) );
-	} @if $unit == em {
+	@if $unit == em {
 		$scale-coef: ceil( ( 1 / ( $height * $base / $size ) ) ) ;
 	}
 	$scale-size: $size / $base;
