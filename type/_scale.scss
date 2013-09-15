@@ -34,14 +34,18 @@
 // $Scale Mixin
 // --------------------------------------------------------------------------
 
-@mixin scale($size, $base: $font-base, $height: $line-height) {
+@mixin scale($size, $base: $font-base, $height: $line-height, $unit: $grid-unit) {
 	$coef: ceil((1 / ($height * $base / $size)));
 	$scale-size: $size / $base;
 	$scale-height: $base * $height / $size;
 
-	font-size: $scale-size * 1em;
+	@if $unit = 'rem' {
+		font-size: $size + px;
+	}
+
+	font-size: $scale-size + $unit;
 	line-height: $scale-height * $coef;
-	margin-top: $scale-height * 1em;
+	margin-top: $scale-height + $unit;
 	margin-bottom: 0;
 }
 
