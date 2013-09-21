@@ -15,7 +15,7 @@ samp {
 }
 
 pre code {
-	@extend %normal-wrap;
+	word-wrap: normal-wrap;
 	white-space: pre-wrap;
 }
 
