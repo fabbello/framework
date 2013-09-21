@@ -3,17 +3,17 @@
 // QUOTES
 //
 // ==========================================================================
-
 // Set consistent quote types.
+
 
 q {
 	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 cite {
-	@include cite-style;
+	@include cite-style();
 }
 
 blockquote {
-	@extend %pull-quote;
+	@include pull-quotes();
 }

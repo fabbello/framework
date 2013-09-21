@@ -8,21 +8,18 @@
 
 @import "grids/grid";
 
-@import "mixins/scale";
-@import "mixins/body";
-@import "mixins/paragraphs";
-@import "mixins/lists";
-@import "mixins/quotes";
-@import "mixins/definitions";
-@import "mixins/accessibility";
+@import "type/scale";
+@import "type/body";
+@import "type/lists";
+@import "type/readers";
 
 @import "styles/base";
 @import "styles/extended";
 @import "styles/headings";
+@import "styles/ampersands";
 @import "styles/quotes";
 @import "styles/tables";
 @import "styles/media";
 @import "styles/forms";
 @import "styles/code";
-@import "mixins/ampersands";
 @import "styles/print";

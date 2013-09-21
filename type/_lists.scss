@@ -5,6 +5,9 @@
 // ==========================================================================
 
 
+// $List Styles
+// --------------------------------------------------------------------------
+
 @mixin list-style( $style ) {
 	// lining style
 	@if $style == normal {
@@ -30,6 +33,73 @@
 
 			&:first-child {
 				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+// $Definition List Styles
+// --------------------------------------------------------------------------
+// http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
+
+@mixin definition-list-style( $style ) {
+
+	// lining style
+	@if $style == lining {
+		dt,
+		dd {
+			display: inline;
+			margin: 0;
+		}
+
+		dt,
+		dd {
+
+			& + dt {
+
+				&:before {
+					content: "\A";
+					white-space: pre;
+				}
+			}
+		}
+
+		dd {
+			& + dd {
+
+				&:before {
+					content: ", ";
+				}
+			}
+
+			&:before {
+				content: ": ";
+				margin-left: -0.2rem; // removes extra space between the dt and the colon
+			}
+		}
+	}
+
+	// dictionary style
+	@if $style == dictionary {
+		dt {
+			display: inline;
+			counter-reset: definitions;
+
+			& + dt {
+				&:before {
+					content: ", ";
+					margin-left: -0.2rem; // removes extra space between the dt and the comma
+				}
+			}
+		}
+
+		dd {
+			display: block;
+			counter-increment: definitions;
+
+			&:before {
+				content: counter(definitions, decimal) ". ";
 			}
 		}
 	}

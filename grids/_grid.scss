@@ -38,15 +38,15 @@
 // $Grid Mixins
 // --------------------------------------------------------------------------
 
-@mixin row( $grid-columns: $grid-columns ) {
+@mixin row( $max-columns: $grid-columns ) {
 	@include clearfix();
 	margin: 0 ( $grid-gutter / -2 );
 }
 
-@mixin column( $x, $grid-columns: $grid-columns ) {
+@mixin column( $columns, $max-columns: $grid-columns ) {
 	display: block;
 	float: left;
-	width: ( $grid-width / $grid-columns ) * $x;
+	width: ( $grid-width / $max-columns ) * $columns;
 	padding: 0 ( $grid-gutter / 2 );
 }
 
