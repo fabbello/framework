@@ -6,7 +6,7 @@
 // http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
 
 
-@mixin definition-list-style($style) {
+@mixin definition-list-style( $style ) {
 	// lining style
 	@if $style == lining {
 		dt,
@@ -70,9 +70,9 @@
 
 
 %lining {
-	@include definition-list-style(lining);
+	@include definition-list-style( lining );
 }
 
 %dictionary-style {
-	@include definition-list-style(dictionary);
+	@include definition-list-style( dictionary );
 }

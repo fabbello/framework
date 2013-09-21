@@ -11,19 +11,19 @@ kbd,
 pre,
 samp {
 	font-family: $font-family-mono;
-	font-size: 1em;
+	font-size: 1#{$font-unit};
 }
 
 pre code {
 	@extend %normal-wrap;
-	@include white-space(pre-wrap);
+	white-space: pre-wrap;
 }
 
 pre {
-	@include white-space(pre);
+	white-space: pre;
 }
 
 code {
-	@include white-space(pre);
+	white-space: pre;
 	font-family: monospace;
 }

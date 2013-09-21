@@ -5,16 +5,6 @@
 // ==========================================================================
 
 
-// $Hyphens
-// --------------------------------------------------------------------------
-// http://trentwalton.com/2011/09/07/css-hyphenation
-
-@mixin css-hyphens($value) {
-	// Accepted values: [ none | manual | auto ]
-	hyphens: $value;      // W3C standard
-}
-
-
 // $Wordwrap
 // --------------------------------------------------------------------------
 // Silent Sass Classes - A.K.A Placeholders
@@ -41,22 +31,10 @@
 
 @mixin body-copy {
 	@extend %breakword;
-	hyphens: auto;
+	hyphens: auto; // http://trentwalton.com/2011/09/07/css-hyphenation
 	text-align: justify;
 	text-justify: inter-word;
 	max-width: $line-length + em;
-}
-
-
-// $White Space
-// --------------------------------------------------------------------------
-
-@mixin white-space($wrap-space) {
-	@if $wrap-space == 'pre-wrap' {
-		white-space: $wrap-space;       // current browsers
-	} @else {
-		white-space: $wrap-space;
-	}
 }
 
 
@@ -64,7 +42,7 @@
 // --------------------------------------------------------------------------
 // http://blog.hypsometry.com/articles/true-small-capitals-with-font-face
 
-@mixin smallcaps($color: $color-body, $weight: $font-weight-small) {
+@mixin smallcaps( $color: $color-body, $weight: $font-weight-small ) {
 	// depends on the font family.
 	// some font-families don't support small caps
 	// or don't provide them with their web font.
@@ -80,7 +58,7 @@
 // $Dropcaps
 // --------------------------------------------------------------------------
 
-@mixin dropcap($float: left, $font-size: 5.25em, $font-family: inherit, $text-indent: 0, $margin: .3em .1em .1em 0, $padding: inherit, $color: $color-heading, $lineHeight: .25, $bg: transparent) {
+@mixin dropcap( $float: left, $font-size: 5.25em, $font-family: inherit, $text-indent: 0, $margin: .3em .1em .1em 0, $padding: inherit, $color: $color-heading, $lineHeight: .25, $bg: transparent ) {
 	&:first-letter {
 		float: $float;
 		margin: $margin;

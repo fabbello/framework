@@ -12,7 +12,6 @@
 $grid-width:            100%                                         !default;
 $grid-gutter:           1.5rem                                       !default;
 $grid-columns:          12                                           !default;
-$grid-unit:             rem											 !default;
 
 
 // $Fonts
@@ -30,6 +29,8 @@ $font-family-sans:      sans-serif                                  !default;
 $font-family-mono:      monospace                                   !default;
 $font-weight:           normal;
 $font-weight-small:     600                                         !default;
+
+$font-unit:             rem                                         !default;
 
 
 // $Lines
@@ -65,5 +66,3 @@ $paragraph-style:       block                                       !default;
 $amp-fontface-name: Ampersand;
 $amp-fontface-source: local('ACaslonPro-Italic'), local('Baskerville'), local('Palatino'), local('Book Antiqua');
 $amp-fontface-fallback: local('Georgia');
-
-$amp-font-family: $font-family;

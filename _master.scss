@@ -4,26 +4,25 @@
 //
 // ==========================================================================
 
-@import "defaults";
+@import "variables";
 
 @import "grids/grid";
 
-@import "type/scale";
-@import "type/body";
-@import "type/paragraphs";
-@import "type/lists";
-@import "type/quotes";
-@import "type/definitions";
-@import "type/accessibility";
-@import "type/ampersands";
+@import "mixins/scale";
+@import "mixins/body";
+@import "mixins/paragraphs";
+@import "mixins/lists";
+@import "mixins/quotes";
+@import "mixins/definitions";
+@import "mixins/accessibility";
 
 @import "styles/base";
 @import "styles/extended";
 @import "styles/headings";
 @import "styles/quotes";
 @import "styles/tables";
-@import "styles/lists";
 @import "styles/media";
 @import "styles/forms";
 @import "styles/code";
+@import "mixins/ampersands";
 @import "styles/print";

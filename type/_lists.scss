@@ -5,12 +5,12 @@
 // ==========================================================================
 
 
-@mixin list-style($style) {
+@mixin list-style( $style ) {
 	// lining style
 	@if $style == normal {
-		padding-left: $paragraph-indent;
-		margin-top: $line-height * 1em;
-		margin-bottom: 0;
+		padding-left:	$paragraph-indent;
+		margin-top:		$line-height * 1em;
+		margin-bottom:	0;
 	}
 
 	@if $style == unstyled {

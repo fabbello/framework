@@ -5,7 +5,7 @@
 // ==========================================================================
 
 
-@mixin paragraph-style($style) {
+@mixin paragraph-style( $style ) {
 	// lining style
 	@if $style == indented {
 		margin: 0 0 $line-height * 1em;

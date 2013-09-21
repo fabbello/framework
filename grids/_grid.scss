@@ -31,31 +31,31 @@
 
 @mixin guides() {
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
-	background-size: 100% #{$line-height}rem;
+	background-size: 100% $line-height#{rem};
 }
 
 
 // $Grid Mixins
 // --------------------------------------------------------------------------
 
-@mixin row($grid-columns: $grid-columns) {
-	margin: 0 ($grid-gutter / -2);
+@mixin row( $grid-columns: $grid-columns ) {
 	@include clearfix();
+	margin: 0 ( $grid-gutter / -2 );
 }
 
-@mixin column($x, $grid-columns: $grid-columns) {
+@mixin column( $x, $grid-columns: $grid-columns ) {
 	display: block;
 	float: left;
-	width: ($grid-width / $grid-columns) * $x;
-	padding: 0 ($grid-gutter / 2);
+	width: ( $grid-width / $grid-columns ) * $x;
+	padding: 0 ( $grid-gutter / 2 );
 }
 
-@mixin push($offset: 1) {
+@mixin push( $offset: 1 ) {
 	position: relative;
-	left: ($grid-width / $grid-columns) * $offset;
+	left: ( $grid-width / $grid-columns ) * $offset;
 }
 
 @mixin pull($offset: 1) {
 	position: relative;
-	right: ($grid-width / $grid-columns) * $offset;
+	right: ( $grid-width / $grid-columns ) * $offset;
 }
