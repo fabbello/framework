@@ -1,19 +1,14 @@
 // ==========================================================================
 //
-// QUOTES
+// LISTS
 //
 // ==========================================================================
-// Set consistent quote types.
 
 
-q {
-	quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-cite {
-	@include cite-style();
-}
-
-blockquote {
-	@include pull-quotes();
+ul,
+ol,
+dl,
+menu,
+dir {
+	@include list-style(normal);
 }

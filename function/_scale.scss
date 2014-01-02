@@ -12,17 +12,9 @@
 	// reset value
 	$value: $base;
 	
-	// positive integers get multiplied
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {
 			$value: $value * $ratio;
-		}
-	}
-	
-	// negative integers get divided
-	@if $exponent < 1 {
-		@for $i from -1 through $exponent {
-			$value: $value / $ratio;
 		}
 	}
 
@@ -68,8 +60,7 @@ $scale-sizes:   tera        power( $font-base,       5 ),
 				gamma       power( $font-base-alt,   3 ), 
 				delta       power( $font-base,       2 ), 
 				epsilon     power( $font-base-alt,   2 ), 
-				zeta        power( $font-base,       1 ),
-				micro       power( $font-base,      -2 );
+				zeta        power( $font-base,       1 );
 
 // for each size in the scale, create a placeholder
 @each $size in $scale-sizes {

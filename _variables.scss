@@ -5,15 +5,6 @@
 // ==========================================================================
 
 
-
-// $Grid
-// --------------------------------------------------------------------------
-
-$grid-width:            100%                                         !default;
-$grid-gutter:           1.5rem                                       !default;
-$grid-columns:          12                                           !default;
-
-
 // $Fonts
 // --------------------------------------------------------------------------
 
@@ -40,24 +31,12 @@ $line-height:           1.65                                        !default;
 $line-length:           $font-size * 30 / 100                       !default;
 
 
-// $Color
-// --------------------------------------------------------------------------
-
-$color-body:            #333                                        !default;
-$color-heading:         #222                                        !default;
-$color-gray:            #c0c0c0                                     !default;
-$color-brand:           #de1645                                     !default;
-$color-highlight:       #ff0                                        !default;
-
-$color-link:            $color-brand                                !default;
-$color-link-background: transparent                                 !default;
-
-
 // $Paragraphs
 // --------------------------------------------------------------------------
 
 $paragraph-indent:      1.5em                                       !default;
 $paragraph-style:       block                                       !default;
+$paragraph-justify:		false										!default;
 
 
 // $Ampersands
@@ -66,3 +45,24 @@ $paragraph-style:       block                                       !default;
 $amp-fontface-name: Ampersand;
 $amp-fontface-source: local('ACaslonPro-Italic'), local('Baskerville'), local('Palatino'), local('Book Antiqua');
 $amp-fontface-fallback: local('Georgia');
+
+
+// $Grid
+// --------------------------------------------------------------------------
+
+$grid-width:            100%                                         !default;
+$grid-gutter:           1.5#{$font-unit}                             !default;
+$grid-columns:          12                                           !default;
+
+
+// $Color
+// --------------------------------------------------------------------------
+
+$color-body:            #3d3f3e                                     !default;
+$color-heading:         #282828                                     !default;
+$color-brand:           #c22129                                     !default;
+$color-highlight:       #feeec3                                     !default;
+$color-gray:            #979797                                     !default;
+
+$color-link:            $color-brand                                !default;
+$color-link-background: transparent                                 !default;

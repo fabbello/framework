@@ -1,6 +1,6 @@
 // ==========================================================================
 //
-// GLOBALS
+// BASIC TYPOGRAPHY
 //
 // ==========================================================================
 
@@ -15,15 +15,14 @@
 // $Base
 // --------------------------------------------------------------------------
 
-html,
-body { min-height: 100%; }
-
 html {
+	height: 100%;
 	font: $font-weight #{$font-size}%/#{$line-height} $font-family;
 	text-size-adjust: 100%;
 }
 
 body {
+	min-height: 100%;
 	margin: 0;
 	color: $color-body; 
 }
@@ -47,17 +46,6 @@ summary {
 	display: block;
 }
 
-audio,
-canvas,
-video {
-	display: inline-block;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
 
 [hidden],
 template {
@@ -70,8 +58,8 @@ template {
 // styles for all headings, in the style of @csswizardry
 
 %hN {
-	text-rendering: optimizeLegibility;
 	margin-bottom: 0;
+	text-rendering: optimizeLegibility;
 	color: $color-heading;
 
 	&:first-child{
@@ -89,20 +77,27 @@ h6 {
 }
 
 
+// $Small
+// --------------------------------------------------------------------------
+
+%small,
+small {
+	font-size: $font-base-small;
+}
+
+
 // $Paragraphs
 // --------------------------------------------------------------------------
 
 p {
 	@include body-copy();
 	@include paragraph-style($paragraph-style);
-}
 
-
-// $Small
-// --------------------------------------------------------------------------
-
-small {
-	@extend %micro;
+	a {
+		color: $color-link;
+		background: $color-link-background;
+		border-bottom: 1px solid;
+	}
 }
 
 
@@ -110,16 +105,18 @@ small {
 // --------------------------------------------------------------------------
 
 a {
-	color: $color-link;
-	background: $color-link-background;
+	color: $color-heading;
+	text-decoration: none;
 
 	&:focus {
 		outline: thin dotted;
 	}
 
+	&:focus,
 	&:active,
 	&:hover {
 		outline: 0;
+		border-bottom: 1px solid;
 	}
 }
 
@@ -131,16 +128,4 @@ a {
 b,
 strong {
 	font-weight: bold;
-}
-
-
-// $Lists
-// --------------------------------------------------------------------------
-
-ul,
-ol,
-dl,
-menu,
-dir {
-	@include list-style(normal);
 }

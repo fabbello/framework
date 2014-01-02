@@ -5,12 +5,26 @@
 // ==========================================================================
 
 
+// $Multimedia
+// --------------------------------------------------------------------------
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
 // $Images
 // --------------------------------------------------------------------------
-// 1. Remove border when inside `a` element in IE 8/9.
+// Remove border when inside `a` element in IE 8/9.
 
 img {
-	border: 0; /* 1 */
+	border: 0;
 	height: auto;
 	vertical-align: middle;
 }

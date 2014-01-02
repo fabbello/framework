@@ -39,23 +39,23 @@
 // --------------------------------------------------------------------------
 
 @mixin row( $max-columns: $grid-columns ) {
-	@include clearfix();
-	margin: 0 ( $grid-gutter / -2 );
+	@include clearfix;
+	margin: 0 $grid-gutter / -2;
 }
 
 @mixin column( $columns, $max-columns: $grid-columns ) {
 	display: block;
 	float: left;
 	width: ( $grid-width / $max-columns ) * $columns;
-	padding: 0 ( $grid-gutter / 2 );
+	padding: 0 $grid-gutter / 2;
 }
 
-@mixin push( $offset: 1 ) {
+@mixin push( $offset: 1, $max-columns: $grid-columns ) {
 	position: relative;
-	left: ( $grid-width / $grid-columns ) * $offset;
+	left: ( $grid-width / $max-columns ) * $offset;
 }
 
-@mixin pull($offset: 1) {
+@mixin pull( $offset: 1, $max-columns: $grid-columns ) {
 	position: relative;
-	right: ( $grid-width / $grid-columns ) * $offset;
+	right: ( $grid-width / $max-columns ) * $offset;
 }

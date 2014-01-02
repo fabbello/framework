@@ -6,20 +6,19 @@
 
 @import "variables";
 
-@import "grids/grid";
+@import "function/grid";
+@import "function/scale";
+@import "function/type";
+@import "function/accessibility";
 
-@import "type/scale";
-@import "type/body";
-@import "type/lists";
-@import "type/readers";
-
-@import "styles/base";
-@import "styles/extended";
-@import "styles/headings";
-@import "styles/ampersands";
-@import "styles/quotes";
-@import "styles/tables";
-@import "styles/media";
-@import "styles/forms";
-@import "styles/code";
-@import "styles/print";
+@import "form/basic";
+@import "form/extended";
+@import "form/headings";
+@import "form/ampersands";
+@import "form/media";
+@import "form/lists";
+@import "form/quotes";
+@import "form/code";
+@import "form/forms";
+@import "form/tables";
+@import "form/print";
