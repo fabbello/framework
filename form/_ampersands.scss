@@ -1,3 +1,5 @@
+@if $use-ampersands == true {
+
 // ==========================================================================
 //
 // AMPERSANDS
@@ -17,3 +19,5 @@
 	src: $amp-fontface-fallback;
 	unicode-range: U+270C;
 }
+
+} //endif

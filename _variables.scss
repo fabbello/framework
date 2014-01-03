@@ -66,3 +66,19 @@ $color-gray:            #979797                                     !default;
 
 $color-link:            $color-brand                                !default;
 $color-link-background: transparent                                 !default;
+
+
+// $Includes
+// --------------------------------------------------------------------------
+
+$use-basic:				false										!default;
+$use-extended:			false										!default;
+$use-headings:			false										!default;
+$use-ampersands:		false										!default;
+$use-media:				false										!default;
+$use-lists:				false										!default;
+$use-quotes:			false										!default;
+$use-code:				false										!default;
+$use-forms:				false										!default;
+$use-tables:			false										!default;
+$use-print:				false										!default;

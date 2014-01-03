@@ -1,3 +1,5 @@
+@if $use-forms == true {
+
 // ==========================================================================
 //
 // FORMS
@@ -121,3 +123,5 @@ textarea {
 	line-height: $line-height;
 	padding: 0 .35em;
 }
+
+} //endif

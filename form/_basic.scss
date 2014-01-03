@@ -1,3 +1,5 @@
+@if $use-basic == true {
+
 // ==========================================================================
 //
 // BASIC TYPOGRAPHY
@@ -129,3 +131,5 @@ b,
 strong {
 	font-weight: bold;
 }
+
+} //endif

@@ -1,3 +1,5 @@
+@if $use-headings == true {
+
 // ==========================================================================
 //
 // HEADINGS
@@ -11,3 +13,5 @@ h3 { @extend %gamma;    }
 h4 { @extend %delta;    }
 h5 { @extend %epsilon;  }
 h6 { @extend %zeta;     }
+
+} //endif
