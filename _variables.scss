@@ -36,15 +36,15 @@ $line-length:           $font-size * 30 / 100                       !default;
 
 $paragraph-indent:      1.5em                                       !default;
 $paragraph-style:       block                                       !default;
-$paragraph-justify:		false										!default;
+$paragraph-justify:     false                                       !default;
 
 
 // $Ampersands
 // --------------------------------------------------------------------------
 
 $amp-fontface-name: Ampersand;
-$amp-fontface-source: local('ACaslonPro-Italic'), local('Baskerville'), local('Palatino'), local('Book Antiqua');
-$amp-fontface-fallback: local('Georgia');
+$amp-fontface-source: local('ACaslonPro-Italic'), local('Baskerville'), local('Palatino'), local('Book Antiqua'); !default;
+$amp-fontface-fallback: local('Georgia');                            !default;
 
 
 // $Grid
