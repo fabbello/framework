@@ -9,17 +9,17 @@
 // --------------------------------------------------------------------------
 
 @function power( $base: $font-base, $exponent: 1, $ratio: $font-ratio ) {
-	// reset value
-	$value: $base;
-	
-	@if $exponent > 1 {
-		@for $i from 2 through $exponent {
-			$value: $value * $ratio;
-		}
-	}
+    // reset value
+    $value: $base;
+    
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $ratio;
+        }
+    }
 
-	// return the last value written
-	@return $value; 
+    // return the last value written
+    @return $value; 
 }
 
 
@@ -27,22 +27,22 @@
 // --------------------------------------------------------------------------
 
 @mixin scale( $size, $base: $font-base, $height: $line-height, $unit: $font-unit ) {
-	$scale-coef:		ceil( ( 1 / ( $height * $base / $size ) ) );
-	$scale-size:		$size / $base;
-	$scale-height:		$base * $height / $size;
-	$scale-margin:		if( $unit == rem, $height#{$unit}, $scale-height#{$unit} );
+    $scale-coef:        ceil( ( 1 / ( $height * $base / $size ) ) );
+    $scale-size:        $size / $base;
+    $scale-height:      $base * $height / $size;
+    $scale-margin:      if( $unit == rem, $height#{$unit}, $scale-height#{$unit} );
 
-	@if $unit == rem {
-		font-size: 		$size#{px};
-	}
-		font-size:		$scale-size#{$unit};
-		line-height:	$scale-height * $scale-coef;
-	
+    @if $unit == rem {
+        font-size:      $size#{px};
+    }
+        font-size:      $scale-size#{$unit};
+        line-height:    $scale-height * $scale-coef;
+    
 
-	@if $size > $base { // That is, if not a <small> element
-		margin-top:		$scale-margin;
-		margin-bottom:	0;
-	}
+    @if $size > $base { // That is, if not a <small> element
+        margin-top:     $scale-margin;
+        margin-bottom:  0;
+    }
 }
 
 
@@ -52,18 +52,18 @@
 // where the first value is the name of the placeholder
 // and the second value is the scale for the size
 $scale-sizes:   tera        power( $font-base,       5 ),
-				giga        power( $font-base-alt,   5 ),
-				mega        power( $font-base,       4 ), 
-				alpha       power( $font-base-alt,   4 ),
-				beta        power( $font-base,       3 ), 
-				gamma       power( $font-base-alt,   3 ), 
-				delta       power( $font-base,       2 ), 
-				epsilon     power( $font-base-alt,   2 ), 
-				zeta        power( $font-base,       1 );
+                giga        power( $font-base-alt,   5 ),
+                mega        power( $font-base,       4 ), 
+                alpha       power( $font-base-alt,   4 ),
+                beta        power( $font-base,       3 ), 
+                gamma       power( $font-base-alt,   3 ), 
+                delta       power( $font-base,       2 ), 
+                epsilon     power( $font-base-alt,   2 ), 
+                zeta        power( $font-base,       1 );
 
 // for each size in the scale, create a placeholder
 @each $size in $scale-sizes {
-	%#{nth( $size, 1 )} {
-		@include scale( nth( $size, 2 ) );
-	}
+    %#{nth( $size, 1 )} {
+        @include scale( nth( $size, 2 ) );
+    }
 }

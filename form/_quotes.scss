@@ -9,15 +9,15 @@
 
 
 q {
-	quotes: "\201C" "\201D" "\2018" "\2019";
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote {
-	@include pull-quotes();
+    @include pull-quotes();
 
-	cite {
-		@include cite-style();
-	}
+    cite {
+        @include cite-style();
+    }
 }
 
 } // endif

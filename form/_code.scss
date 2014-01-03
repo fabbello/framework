@@ -11,22 +11,22 @@ code,
 kbd,
 pre,
 samp {
-	font-family: $font-family-mono;
-	font-size: 1#{$font-unit};
+    font-family: $font-family-mono;
+    font-size: 1#{$font-unit};
 }
 
 pre code {
-	word-wrap: normal-wrap;
-	white-space: pre-wrap;
+    word-wrap: normal-wrap;
+    white-space: pre-wrap;
 }
 
 pre {
-	white-space: pre;
+    white-space: pre;
 }
 
 code {
-	white-space: pre;
-	font-family: monospace;
+    white-space: pre;
+    font-family: monospace;
 }
 
 } // endif

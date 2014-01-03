@@ -9,14 +9,14 @@
 // --------------------------------------------------------------------------
 
 @mixin hidden {
-	border: 0;
-	clip: rect( 0 0 0 0 );
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 
@@ -25,16 +25,16 @@
 // Include and add display:block/inline-block, width, height and background
 
 @mixin image-replace {
-	background-color: transparent;
-	border: 0;
-	overflow: hidden;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
 
-	&:before {
-		content: "";
-		display: block;
-		width: 0;
-		height: 150%;
-	}
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
 }
 
 
@@ -42,18 +42,18 @@
 // --------------------------------------------------------------------------
 
 @mixin skip-links {
-	position: absolute;
+    position: absolute;
 
-	a {
-		position: absolute;
-		left: -7000px;
-		padding: 0.5em;
-		background: black;
-		color: white;
-		text-decoration: none;
-	
-		&:focus {
-			position: static;
-		}
-	}
+    a {
+        position: absolute;
+        left: -7000px;
+        padding: 0.5em;
+        background: black;
+        color: white;
+        text-decoration: none;
+    
+        &:focus {
+            position: static;
+        }
+    }
 }

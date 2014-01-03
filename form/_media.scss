@@ -13,12 +13,12 @@
 audio,
 canvas,
 video {
-	display: inline-block;
+    display: inline-block;
 }
 
 audio:not([controls]) {
-	display: none;
-	height: 0;
+    display: none;
+    height: 0;
 }
 
 // $Images
@@ -26,15 +26,15 @@ audio:not([controls]) {
 // Remove border when inside `a` element in IE 8/9.
 
 img {
-	border: 0;
-	height: auto;
-	vertical-align: middle;
+    border: 0;
+    height: auto;
+    vertical-align: middle;
 }
 
 // Correct overflow displayed oddly in IE 9.
 
 svg:not(:root) {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -43,7 +43,7 @@ svg:not(:root) {
 // Address margin not present in IE 8/9 and Safari 5.
 
 figure {
-	margin: 0;
+    margin: 0;
 }
 
 } // endif
