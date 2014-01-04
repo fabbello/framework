@@ -36,7 +36,7 @@ $line-length:           $font-size * 30 / 100                       !default;
 
 $paragraph-indent:      1.5                                         !default;
 $paragraph-style:       block                                       !default;
-$paragraph-justify:     true                                        !default;
+$paragraph-justify:     false                                        !default;
 
 
 // $Ampersands
@@ -50,9 +50,9 @@ $amp-fontface-fallback: local('Georgia')                            !default;
 // $Grid
 // --------------------------------------------------------------------------
 
-$grid-width:            100%                                         !default;
-$grid-gutter:           1.5                                          !default;
-$grid-columns:          12                                           !default;
+$grid-width:            100%                                        !default;
+$grid-gutter:           1.5                                         !default;
+$grid-columns:          12                                          !default;
 
 
 // $Color
@@ -71,14 +71,14 @@ $color-link-background: transparent                                 !default;
 // $Imports
 // --------------------------------------------------------------------------
 
-$use-basic:             true                                       !default;
-$use-extended:          true                                       !default;
-$use-headings:          true                                       !default;
-$use-ampersands:        true                                       !default;
-$use-media:             true                                       !default;
-$use-lists:             true                                       !default;
-$use-quotes:            true                                       !default;
-$use-code:              true                                       !default;
-$use-forms:             true                                       !default;
-$use-tables:            true                                       !default;
-$use-print:             true                                       !default;
+$use-basic:             false                                       !default;
+$use-extended:          false                                       !default;
+$use-headings:          false                                       !default;
+$use-ampersands:        false                                       !default;
+$use-media:             false                                       !default;
+$use-lists:             false                                       !default;
+$use-quotes:            false                                       !default;
+$use-code:              false                                       !default;
+$use-forms:             false                                       !default;
+$use-tables:            false                                       !default;
+$use-print:             false                                       !default;
