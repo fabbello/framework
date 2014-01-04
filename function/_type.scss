@@ -30,7 +30,7 @@
 
         & + p {
             //siblings indentation
-            text-indent: $indent-val;
+            text-indent: $indent-val + $font-unit;
         }
     }
 
