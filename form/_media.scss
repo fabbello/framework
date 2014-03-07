@@ -37,6 +37,12 @@ svg:not(:root) {
     overflow: hidden;
 }
 
+// Assign a class name for image replacement.
+
+.image {
+    @include image-replace();
+}
+
 
 // $Figures
 // --------------------------------------------------------------------------

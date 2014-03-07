@@ -7,6 +7,16 @@
 // and http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/
 
 
+// $Border-Box Model
+// --------------------------------------------------------------------------
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
 // $Micro Clearfix
 // --------------------------------------------------------------------------
 // http://nicolasgallagher.com/micro-clearfix-hack/

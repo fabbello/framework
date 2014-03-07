@@ -26,7 +26,7 @@
     }
 
     // Don't show links for images, or javascript/internal links
-    .ir a:after,
+    .image a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
         content: "";
