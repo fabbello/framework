@@ -9,9 +9,13 @@
 // --------------------------------------------------------------------------
 
 @mixin body-copy {
-    max-width:      $line-length + em;
-    word-wrap:      break-word;
-    hyphens:        auto; // http://trentwalton.com/2011/09/07/css-hyphenation
+    max-width:          $line-length + em;
+    word-wrap:          break-word;
+
+    -webkit-hyphens:    auto;
+    -moz-hyphens:       auto;
+    -ms-hyphens:        auto;
+    hyphens:            auto; // http://trentwalton.com/2011/09/07/css-hyphenation
     
     @if $paragraph-justify == true {
         text-align:     justify;

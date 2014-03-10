@@ -9,11 +9,14 @@
 
 // $Base
 // --------------------------------------------------------------------------
+// 1. Prevent iOS text size adjust after orientation change, without disabling
+// user zoom.
 
 html {
     height: 100%;
     font: $font-weight #{$font-size}%/#{$line-height} $font-family;
-    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 1 */
 }
 
 body {
