@@ -38,7 +38,7 @@
 // $Grid Mixins
 // --------------------------------------------------------------------------
 
-@mixin row( $max-columns: $grid-columns ) {
+@mixin row() {
     @include clearfix;
     margin: 0 $grid-gutter / -2#{$font-unit};
 }

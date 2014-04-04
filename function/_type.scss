@@ -34,13 +34,13 @@
 
         & + p {
             //siblings indentation
-            text-indent: $indent-val + $font-unit;
+            text-indent: $paragraph-indent + $font-unit;
         }
     }
 
     @if $style == block {
-        margin-top:     $line-height * 1em;
-        margin-bottom:  0;
+        margin-top:     0;
+        margin-bottom:  $line-height * 1em;
     }
 }
 
@@ -63,6 +63,14 @@
             color:          $color;
         }
     }
+}
+
+
+// $Small
+// --------------------------------------------------------------------------
+
+@mixin font-small() {
+    font-size: $font-base-small;
 }
 
 
@@ -119,7 +127,7 @@
 @mixin list-style( $style ) {
     // lining style
     @if $style == normal {
-        padding-left:   $paragraph-indent;
+        padding-left:   $paragraph-indent + $font-unit;
         margin-top:     $line-height * 1em;
         margin-bottom:  0;
     }
@@ -137,7 +145,7 @@
 
         li {
             float: left;
-            margin-left: $indent-value;
+            margin-left: $paragraph-indent + $font-unit;
 
             &:first-child {
                 margin-left: 0;

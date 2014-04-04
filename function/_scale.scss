@@ -41,7 +41,7 @@
 
     @if $size > $base { // That is, if not a <small> element
         margin-top:     $scale-margin;
-        margin-bottom:  0;
+        margin-bottom:  $line-height#{$unit};
     }
 }
 

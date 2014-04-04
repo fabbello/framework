@@ -8,10 +8,10 @@
 // $Fonts
 // --------------------------------------------------------------------------
 
-$font-size:             112.5                                       !default;
+$font-size:             100                                         !default;
 $font-size-alt:         $font-size * 0.75                           !default;  
-$font-base:             16 * ($font-size / 100);
-$font-base-alt:         16 * ($font-size-alt / 100);
+$font-base:             16 * ( $font-size / 100 );
+$font-base-alt:         16 * ( $font-size-alt / 100 );
 $font-base-small:       80%                                         !default;
 $font-ratio:            1.618                                       !default;
 
@@ -51,7 +51,7 @@ $amp-fontface-fallback: local('Georgia')                            !default;
 // --------------------------------------------------------------------------
 
 $grid-width:            100%                                        !default;
-$grid-gutter:           1.5                                         !default;
+$grid-gutter:           2.5                                         !default;
 $grid-columns:          12                                          !default;
 
 
