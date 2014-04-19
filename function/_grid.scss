@@ -31,23 +31,36 @@
 
 @mixin guides() {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
-    background-size: 100% $line-height#{rem};
+    background-size: 100% $line-height +em;
 }
 
 
 // $Grid Mixins
 // --------------------------------------------------------------------------
 
-@mixin row() {
+@mixin row( $margin: false ) {
     @include clearfix;
-    margin: 0 $grid-gutter / -2#{$font-unit};
+
+    @if $margin == true {
+        margin: 0 $grid-gutter * -.5rem;
+    }
 }
 
-@mixin column( $columns, $max-columns: $grid-columns ) {
+@mixin column( $margin: false, $padding: true ) {
     display: block;
     float: left;
+
+    @if $margin == true {
+        margin: 0 $grid-gutter * .5rem;
+    }
+
+    @if $padding == true {
+        padding: 0 $grid-gutter * .5rem;
+    }
+}
+
+@mixin column-width( $columns, $max-columns: $grid-columns ) {  
     width: ( $grid-width / $max-columns ) * $columns;
-    padding: 0 $grid-gutter / 2#{$font-unit};
 }
 
 @mixin push( $offset: 1, $max-columns: $grid-columns ) {

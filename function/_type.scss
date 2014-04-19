@@ -5,10 +5,10 @@
 // ==========================================================================
 
 
-// $Body Copy
+// $Paragraph Text
 // --------------------------------------------------------------------------
 
-@mixin body-copy {
+@mixin paragraph-text {
     max-width:          $line-length + em;
     word-wrap:          break-word;
 
@@ -24,10 +24,10 @@
 }
 
 
-// $Paragraph Styles
+// $Paragraph Indentation
 // --------------------------------------------------------------------------
 
-@mixin paragraph-style( $style ) {
+@mixin paragraph-indent( $style ) {
 
     @if $style == indented {
         margin: 0 0 $line-height * 1em;

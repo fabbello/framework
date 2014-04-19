@@ -56,7 +56,9 @@ template {
 // styles for all headings, in the style of @csswizardry
 
 %hN {
+    color: $color-heading;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -81,8 +83,8 @@ small {
 // --------------------------------------------------------------------------
 
 p {
-    @include body-copy;
-    @include paragraph-style($paragraph-style);
+    @include paragraph-text;
+    @include paragraph-indent( $paragraph-style );
 
     a {
         color: $color-link;

@@ -38,11 +38,7 @@
         font-size:      $scale-size#{$unit};
         line-height:    $scale-height * $scale-coef;
     
-
-    @if $size > $base { // That is, if not a <small> element
-        margin-top:     $scale-margin;
-        margin-bottom:  $line-height#{$unit};
-    }
+        margin:     $scale-margin 0 $line-height#{$unit};
 }
 
 
